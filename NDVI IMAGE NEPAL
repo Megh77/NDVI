@@ -1,3 +1,6 @@
+//Asset for this code
+//https://code.earthengine.google.com/?asset=users/megharajpoudel/NDVI_Taxus
+
 var dataset = ee.ImageCollection('MODIS/006/MOD13Q1')
                   .filter(ee.Filter.date('2021-04-30', '2021-06-30'))
                   .map(function(image){return image.clip(Nepal)});
